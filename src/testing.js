@@ -18,7 +18,7 @@ function checkAnswer() {
   }
 }
 
-document.body.style.backgroundImage = "url('https://wallpaperaccess.com/full/3347901.jpg')";
+document.body.style.backgroundImage = "linear-gradient(rgba(46, 47, 66, 0.1), rgba(46, 47, 66, 0.1)), url('https://wallpaperaccess.com/full/3347901.jpg')";
  aElements = document.getElementsByTagName("a"); // Отримуємо всі елементи a
  aArray = Array.from(aElements); // Перетворюємо HTMLCollection в масив
 
@@ -35,6 +35,9 @@ aArray.forEach(a => {
 ulElement.style.display = "flex"; // Встановлюємо тип відображення на flex для центрування
 ulElement.style.justifyContent = "center"; // Центруємо елементи по горизонталі
 ulElement.style.alignItems = "center"; // Центруємо елементи по вертикалі
+ulElement.style.paddingLeft = "0"; 
+
+
 
 // Центруємо h1 і змінюємо колір на оранжевий
  h1Elements = document.getElementsByTagName("h1"); // Отримуємо всі елементи h1
