@@ -11,8 +11,8 @@
         }
 
 document.body.style.backgroundImage = "url('https://wallpaperaccess.com/full/3347901.jpg')";
-let aElements = document.getElementsByTagName("a"); // Отримуємо всі елементи a
-let aArray = Array.from(aElements); // Перетворюємо HTMLCollection в масив
+const aElements = document.getElementsByTagName("a"); // Отримуємо всі елементи a
+const aArray = Array.from(aElements); // Перетворюємо HTMLCollection в масив
 
 aArray.forEach(a => {
   a.style.listStyle = "none"; // Видаляємо маркери
@@ -22,15 +22,15 @@ aArray.forEach(a => {
 });
 
 // Щоб розмістити елементи a по центру, ви можете стилізувати їх контейнер (наприклад, ul)
-let ulElement = document.getElementsByTagName("ul")[0]; // Припустимо, що у вас є тільки один елемент ul
+const ulElement = document.getElementsByTagName("ul")[0]; // Припустимо, що у вас є тільки один елемент ul
 
 ulElement.style.display = "flex"; // Встановлюємо тип відображення на flex для центрування
 ulElement.style.justifyContent = "center"; // Центруємо елементи по горизонталі
 ulElement.style.alignItems = "center"; // Центруємо елементи по вертикалі
 
 // Центруємо h1 і змінюємо колір на оранжевий
-let h1Elements = document.getElementsByTagName("h1"); // Отримуємо всі елементи h1
-let h1Array = Array.from(h1Elements); // Перетворюємо HTMLCollection в масив
+const h1Elements = document.getElementsByTagName("h1"); // Отримуємо всі елементи h1
+const h1Array = Array.from(h1Elements); // Перетворюємо HTMLCollection в масив
 
 h1Array.forEach(h1 => {
   h1.style.color = "yellow"; // Змінюємо колір на оранжевий
