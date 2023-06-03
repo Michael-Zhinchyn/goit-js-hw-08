@@ -1,3 +1,21 @@
+document.body.innerHTML += `
+<div id="jsChallenge">
+    <h1>Solve this JavaScript problem to enter:</h1>
+    <p>
+        What is the concept called where a JavaScript function can access
+        variables from its outer (parent) scope?
+    </p>
+    <input id="userAnswer" type="text" />
+    <button onclick="checkAnswer()">Check</button>
+</div>
+
+<div id="siteContent">
+    <h1>Welcome to the Homework # 8!</h1>
+    <!-- Rest of the site content here -->
+</div>
+`;
+
+ 
  const correctAnswer = "closure"; // Correct answer to your JavaScript problem
 
 if (localStorage.getItem('solved')) {
