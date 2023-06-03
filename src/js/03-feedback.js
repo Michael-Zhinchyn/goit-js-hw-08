@@ -32,3 +32,10 @@ form.addEventListener('submit', event => {
     form.reset();
     localStorage.removeItem('feedback-form-state');
 });
+
+
+
+const pageLink = document.querySelector('a')
+pageLink.style.fontWeight = '600'
+pageLink.style.color = 'blue'
+pageLink.style.textDecoration = 'none'

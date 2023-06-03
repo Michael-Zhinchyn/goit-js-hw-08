@@ -27,3 +27,10 @@ if (savedTime) {
 }
 
 
+const pageLinkSec = document.querySelector('a')
+pageLinkSec.style.fontWeight = '600'
+pageLinkSec.style.color = 'blue'
+pageLinkSec.style.textDecoration = 'none'
+
+console.log(pageLinkSec);
+

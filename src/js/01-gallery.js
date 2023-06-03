@@ -34,6 +34,14 @@ function onClick(evt) {
     
 list.style.listStyle = 'none'
 
+const pageLink = document.querySelector('a')
+pageLink.style.fontWeight = '600'
+pageLink.style.color = 'blue'
+pageLink.style.textDecoration = 'none'
+
+
+
+
 
 
 
