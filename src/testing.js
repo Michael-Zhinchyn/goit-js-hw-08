@@ -11,7 +11,6 @@ document.body.innerHTML += `
 
 <div id="siteContent">
     <h1>Welcome to the Homework # 8!</h1>
-    <!-- Rest of the site content here -->
 </div>
 `;
 
