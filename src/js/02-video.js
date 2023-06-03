@@ -8,10 +8,8 @@ const video = document.getElementById("vimeo-player")
 const player = new Player(video)
 
 
-
 // ініціалізую throttle function
 const throttledTimeUpdate = throttle(seconds => {
-
     // Зберігаю час в локальне сховище.
     localStorage.setItem('videoplayer-current-time', seconds);
 }, 1000);  // Throttle 1 раз в секунду
