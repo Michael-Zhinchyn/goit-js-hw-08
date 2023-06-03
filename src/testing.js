@@ -29,8 +29,8 @@ aArray.forEach(a => {
   a.style.fontWeight = "500"; // Змінюємо жирність тексту
 });
 
-// Щоб розмістити елементи a по центру, ви можете стилізувати їх контейнер (наприклад, ul)
- ulElement = document.getElementsByTagName("ul")[0]; // Припустимо, що у вас є тільки один елемент ul
+// Щоб розмістити елементи a по центру, стилізуємо ul
+ ulElement = document.getElementsByTagName("ul")[0]; // Припустимо, що є тільки один елемент ul
 
 ulElement.style.display = "flex"; // Встановлюємо тип відображення на flex для центрування
 ulElement.style.justifyContent = "center"; // Центруємо елементи по горизонталі
