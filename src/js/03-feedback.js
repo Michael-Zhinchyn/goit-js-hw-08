@@ -1,19 +1,24 @@
-import throttle from "lodash.throttle"
+import throttle from "lodash.throttle";
 
 const form = document.querySelector('.feedback-form');
-const emailInput = form.elements.email;
-const messageInput = form.elements.message;
 const submitButton = document.querySelector('button');
+const pageLink = document.querySelector('a');
+const iconElement = document.createElement('div');
+const { email: emailInput, message: messageInput } = form.elements;
+const feedbackKey = 'feedback-form-state';
+const savedFeedback = JSON.parse(localStorage.getItem(feedbackKey));
 
-const savedFeedback = JSON.parse(localStorage.getItem('feedback-form-state'));
+// Initialize saved feedback if exists
 if (savedFeedback) {
-    emailInput.value = savedFeedback.email;
-    messageInput.value = savedFeedback.message;
-    submitButton.disabled = !(emailInput.value && messageInput.value);
+    const { email, message } = savedFeedback;
+    emailInput.value = email;
+    messageInput.value = message;
+    submitButton.disabled = !(email && message);
 }
 
+// Form input event listener
 form.addEventListener('input', throttle(() => {
-    localStorage.setItem('feedback-form-state', JSON.stringify({
+    localStorage.setItem(feedbackKey, JSON.stringify({
         email: emailInput.value,
         message: messageInput.value
     }));
@@ -21,36 +26,37 @@ form.addEventListener('input', throttle(() => {
     submitButton.disabled = !(emailInput.value && messageInput.value);
 }, 500));
 
+// Form submit event listener
 form.addEventListener('submit', event => {
     event.preventDefault();
-    
+
     console.log({
         email: emailInput.value,
         message: messageInput.value
     });
-    
+
     form.reset();
-    localStorage.removeItem('feedback-form-state');
+    localStorage.removeItem(feedbackKey);
     submitButton.disabled = true;
 });
 
-const pageLink = document.querySelector('a')
+// Configure page link
 Object.assign(pageLink.style, {
-    fontWeight : '600',
-    display : 'flex',
-    justifyContent : 'end',
-    color : 'salmon',
-    textDecoration : 'none',
-    position : 'fixed',
-    right : '5%',
-    top : '10px'
-})
+    fontWeight: '600',
+    display: 'flex',
+    justifyContent: 'end',
+    color: 'salmon',
+    textDecoration: 'none',
+    position: 'fixed',
+    right: '5%',
+    top: '10px'
+});
+pageLink.textContent = 'CLICK HERE FOR EXIT';
+pageLink.href = 'https://dorneawhale.files.wordpress.com/2015/02/thank-you2.gif';
 
-pageLink.textContent = 'CLICK HERE FOR EXIT'
-pageLink.href = 'https://dorneawhale.files.wordpress.com/2015/02/thank-you2.gif'
-form.style.margin= 'auto';
+form.style.margin = 'auto';
 
-const iconElement = document.createElement('div');
+// Configure icon
 iconElement.innerHTML = `
 <a href="02-video.html" style="text-decoration: none; color: inherit;">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" style="vertical-align: middle;">
@@ -58,14 +64,15 @@ iconElement.innerHTML = `
     </svg>
     <span style="margin-left: 5px;">Back</span>
 </a>`;
+
 document.body.prepend(iconElement);
 
-const icon = document.querySelector('svg')
-icon.style.fill = 'orange'
+const icon = document.querySelector('svg');
+icon.style.fill = 'orange';
 
-const span = document.querySelector('span')
-span.style.color = 'orange'
-span.style.fontSize = '18px'
-span.style.fontWeight = '500'
-
-
+const span = document.querySelector('span');
+Object.assign(span.style, {
+    color: 'orange',
+    fontSize: '18px',
+    fontWeight: '500'
+});
