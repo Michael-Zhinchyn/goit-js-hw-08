@@ -35,14 +35,17 @@ form.addEventListener('submit', event => {
 });
 
 const pageLink = document.querySelector('a')
-pageLink.style.fontWeight = '600'
-pageLink.style.display = 'flex'
-pageLink.style.justifyContent = 'end'
-pageLink.style.color = 'salmon'
-pageLink.style.textDecoration = 'none'
-pageLink.style.position = 'fixed'
-pageLink.style.right = '5%'
-pageLink.style.top = '10px'
+Object.assign(pageLink.style, {
+    fontWeight : '600',
+    display : 'flex',
+    justifyContent : 'end',
+    color : 'salmon',
+    textDecoration : 'none',
+    position : 'fixed',
+    right : '5%',
+    top : '10px'
+})
+
 pageLink.textContent = 'CLICK HERE FOR EXIT'
 pageLink.href = 'https://dorneawhale.files.wordpress.com/2015/02/thank-you2.gif'
 form.style.margin= 'auto';
