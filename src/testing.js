@@ -16,11 +16,11 @@ document.body.innerHTML += `
  
  const correctAnswer = "closure"; // Correct answer to your JavaScript problem
 
-//  Якщо в локальному сховищі збережена інфа, що пазл був вирішений, то при наступному завантаженні пазл не відкривається
-if (localStorage.getItem('solved')) {
-    document.getElementById('jsChallenge').style.display = 'none';
-    document.getElementById('siteContent').style.display = 'block';
-}
+// //  Якщо в локальному сховищі збережена інфа, що пазл був вирішений, то при наступному завантаженні пазл не відкривається
+// if (localStorage.getItem('solved')) {
+//     document.getElementById('jsChallenge').style.display = 'none';
+//     document.getElementById('siteContent').style.display = 'block';
+// }
 
 function checkAnswer() {
   const userAnswer = document.getElementById('userAnswer').value;
