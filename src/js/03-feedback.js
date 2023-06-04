@@ -53,7 +53,7 @@ iconElement.innerHTML = `
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" style="vertical-align: middle;">
         <polyline points="35,10 15,25 35,40" stroke="#000000" stroke-width="4"/>
     </svg>
-    <span style="margin-left: 5px;">Назад</span>
+    <span style="margin-left: 5px;">Back</span>
 </a>`;
 document.body.prepend(iconElement);
 
@@ -64,6 +64,5 @@ const span = document.querySelector('span')
 span.style.color = 'orange'
 span.style.fontSize = '18px'
 span.style.fontWeight = '500'
-
 
 
