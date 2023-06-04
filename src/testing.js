@@ -10,13 +10,13 @@ document.body.innerHTML += `
 </div>
 
 <div id="siteContent">
-    <h1>Welcome to the Homework # 8!</h1>
-</div>
-`;
+    <h1>Welcome to My Homework # 8</h1>
+</div>`
 
  
  const correctAnswer = "closure"; // Correct answer to your JavaScript problem
 
+//  Якщо в локальному сховищі збережена інфа, що пазл був вирішений, то при наступному завантаженні пазл не відкривається
 if (localStorage.getItem('solved')) {
     document.getElementById('jsChallenge').style.display = 'none';
     document.getElementById('siteContent').style.display = 'block';

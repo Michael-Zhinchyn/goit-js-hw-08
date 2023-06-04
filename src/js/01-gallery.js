@@ -28,7 +28,10 @@ const pageLink = document.querySelector('a')
 pageLink.style.fontWeight = '600'
 pageLink.style.color = 'blue'
 pageLink.style.textDecoration = 'none'
-pageLink.textContent = 'Go To The Next Task - VIDEO'
+pageLink.style.display= 'flex'
+pageLink.style.justifyContent = 'end'
+pageLink.style.paddingRight = '20px'
 pageLink.href = '02-video.html'
+pageLink.textContent = 'Go To The Next Task - VIDEO'
 
 
