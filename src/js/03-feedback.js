@@ -36,5 +36,25 @@ form.addEventListener('submit', event => {
 
 const pageLink = document.querySelector('a')
 pageLink.style.fontWeight = '600'
-pageLink.style.color = 'blue'
+pageLink.style.display = 'flex'
+pageLink.style.justifyContent = 'end'
+pageLink.style.color = 'salmon'
 pageLink.style.textDecoration = 'none'
+pageLink.style.position = 'absolute'
+pageLink.style.right = '5%'
+pageLink.textContent = 'CLICK HERE FOR EXIT'
+pageLink.href = 'https://dorneawhale.files.wordpress.com/2015/02/thank-you2.gif'
+form.style.margin= 'auto';
+
+const iconElement = document.createElement('div');
+iconElement.innerHTML = `
+<a href="02-video.html" style="text-decoration: none; color: inherit;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50" style="vertical-align: middle;">
+        <polyline points="35,10 15,25 35,40" stroke="#000000" stroke-width="4" fill="none" />
+    </svg>
+    <span style="margin-left: 5px;">Назад</span>
+</a>`;
+document.body.prepend(iconElement);
+
+
+

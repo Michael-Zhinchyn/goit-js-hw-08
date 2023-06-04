@@ -4,7 +4,6 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 // Change code below this line
 
-
 const list = document.querySelector('.gallery')
 
 function markup(items) {
@@ -15,34 +14,21 @@ function markup(items) {
  </li>`).join("")
 }
 
-
 list.insertAdjacentHTML('beforeend', markup(galleryItems))
 
-list.addEventListener('click', onClick) 
-function onClick(evt) {
-    evt.preventDefault()
-    if(evt.target.tagName !== 'IMG') {
-        return
-    }
-}
+new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: 'alt',
+    captionPosition: 'bottom'
+});
 
- new SimpleLightbox('.gallery a', {
-        captionDelay: 250,
-        captionsData: 'alt',
-        captionPosition: 'bottom'
- }); 
-    
 list.style.listStyle = 'none'
 
 const pageLink = document.querySelector('a')
 pageLink.style.fontWeight = '600'
 pageLink.style.color = 'blue'
 pageLink.style.textDecoration = 'none'
+pageLink.textContent = 'Go To The Next Task - VIDEO'
+pageLink.href = '02-video.html'
 
 
-
-
-
-
-
- 
